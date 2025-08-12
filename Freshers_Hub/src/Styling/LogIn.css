@@ -1,0 +1,162 @@
+/* ==== Login Page Styling ==== */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Login Container */
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Headings */
+.login-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #1e293b;
+}
+
+.login-container p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  outline: none;
+}
+
+/* Forgot Password Link */
+.forgot {
+  float: right;
+  font-size: 0.9rem;
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error-text {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4f46e5;
+}
+
+/* Sign Up Text */
+.signup-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.signup-text a {
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signup-text a:hover {
+  color: #4f46e5;
+}
+
+/* Divider (Replaced before/after with border line) */
+.divider {
+  margin: 25px 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.facebook-btn,
+.github-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+.facebook-btn {
+  background-color: #1877f2;
+}
+
+.facebook-btn:hover {
+  background-color: #155ed8;
+}
+
+.github-btn {
+  background-color: #24292e;
+}
+
+.github-btn:hover {
+  background-color: #1b1f23;
+}

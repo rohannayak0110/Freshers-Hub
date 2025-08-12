@@ -1,0 +1,194 @@
+:root {
+  --primary: #2c3e50; /* Dark Blue/Charcoal */
+  --secondary: #3498db; /* Bright Blue */
+  --accent: #e74c3c; /* Red/Orange */
+  --light: #ecf0f1; /* Light Gray */
+  --dark: #2c3e50; /* Same as primary for text */
+  --success: #2ecc71; /* Green */
+  --warning: #f39c12; /* Orange */
+  --info: #3498db; /* Same as secondary */
+
+  /* New Animation/Transition Variables */
+  --transition-speed: 0.3s;
+  --transition-ease: ease-in-out;
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+#btn-log {
+  background-color: red;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f9f9f9;
+  overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Animations */
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-light);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+/* Apply animation on page load */
+.header-animate {
+  animation: headerFadeIn 0.8s var(--transition-ease) forwards;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative; /* For the hover effect */
+  overflow: hidden; /* For the hover effect */
+  padding-right: 5px; /* Space for the secondary color */
+}
+
+.logo span {
+  color: var(--secondary);
+  transition: color var(--transition-speed) var(--transition-ease);
+}
+
+/* Logo hover effect */
+.logo::after {
+  content: attr(data-text); /* Get text from data-text attribute */
+  position: absolute;
+  left: 0;
+  width: 0; /* Initially hidden */
+  color: var(--secondary);
+  overflow: hidden;
+  transition: width var(--transition-speed) var(--transition-ease);
+  white-space: nowrap; /* Prevent text wrap */
+}
+
+.logo:hover::after {
+  width: 100%; /* Reveal on hover */
+}
+
+.logo:hover span {
+  color: white; /* Change original span color on hover */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-speed) var(--transition-ease);
+  font-weight: 500;
+  padding-bottom: 5px; /* Space for underline */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transition: width var(--transition-speed) var(--transition-ease);
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform var(--transition-speed) var(--transition-ease);
+}
+
+.mobile-menu:hover {
+  transform: scale(1.1);
+}
+ 
+button:hover {
+  background-color: white;
+  color: black;
+}
